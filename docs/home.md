@@ -283,8 +283,8 @@ You should see a message similar to "Your site is live at [XXX]", where "[XXX]" 
 ![github_page_url](images/github_page_url.png)
 
 Also, sometimes it will take a while for GitHub to update your webpage content.
-You can check the "Action" page to check the status.
-For example, here is the [action page for our tutorial repository](https://github.com/yenchiah/jupyter-book-template/actions).
+You can check the "Actions" page to check the status.
+For example, here is the [Actions page for our tutorial repository](https://github.com/yenchiah/jupyter-book-template/actions).
 
 You now have the public URL for your website.
 More information about how to publish your book can be found on [this documentation](https://jupyterbook.org/en/stable/start/publish.html).
@@ -322,5 +322,5 @@ Q3: My Jupyter Book installation is still pending forever after following step 2
 
 Q4: I followed all the steps but my webpage does not have anything, or my webpage is not updated. What should I do?
 - Check if your repository has the (updated) content. You may fail to push the code correctly to the GitHub repository. You can check this by using `git status`, which should indicate that you have no pending changes.
-- Sometimes it will take a while for GitHub to update your page. Give it some time and check later. You can go to the "Action" page in your GitHub repository to check the status.
+- Sometimes it will take a while for GitHub to update your page. Give it some time and check later. You can go to the "Actions" page in your GitHub repository to check the status.
 - Your browser may have an old cache that does not reflect new changes. Search online about how to clear your browser cache. After cleaning the cache, check the website again.
