@@ -1,6 +1,6 @@
 # Jupyter Book Tutorial
 
-(Last updated: June 9, 2023)
+(Last updated: June 20, 2023)
 
 In this tutorial, we will teach you how to create a Jupyter book and deploy it online.
 This page is written in markdown, which also serves as an example.
@@ -293,11 +293,36 @@ More information about how to publish your book can be found on [this documentat
 ## Update the website content
 <a name="update"></a>
 
-Every time you build some new files (or updated files), you need to rebuild the book and push new changes to your GitHub repository.
+After completing all the above steps, you should now have a remote repository on GitHub and a local repository on your computer.
+Your local repository should be a folder with the name that we asked you to rename (i.e., the `MY_REPOSITORY_NAME` in the previous steps).
+If you are still confused about why there are remote and local repositories, check the 15-minute Git tutorial video that is mentioned in the [Prerequisites](#pre).
+
+If you cannot find the location of the folder on your computer, find it using the search functionality on your computer's operating system.
+For Windows users, there should be a search bar near the Windows start menu.
+For Mac users, there should be a magnifying glass icon at the top right.
+
+Now you can start to work on your notebook or markdown files.
+We recommend that you start with the `notebook.ipynb` file and replace the content with your code and text.
+If you already have an existing notebook, you can replace the original `notebook.ipynb` file with your notebook and rename the file with `notebook.ipynb`.
 
 To update the content of your website, **repeat step 4 and 5 without the package installation parts**.
 Step 4 will rebuild the book, which means compiling/translating the notebook and markdown files into HTML/CSS/JavaScript files.
 Step 5 will push your new content to the GitHub repository and update the online content of your website.
+
+Every time you build some new files (or updated files), you need to rebuild the book and push new changes to your remote GitHub repository.
+This, again, will take some time for GitHub to process the changes and update the website.
+You can check the Actions page (as shown in the image below) for the status.
+
+![actions_page](images/actions_page.png)
+
+If the Actions page shows that the status is good with a green checkmark (as shown in the image below), it means that the webpage is successfully updated.
+If you still do not see the changes on your browser, either wait for a while or clear the browser cache.
+Search online (e.g., Google) to know how to clear your browser cache.
+
+![page_updated](images/page_updated.png)
+
+If you have multiple notebook files that you want to add to the website, you will need to edit the `_toc.yml` file.
+Check [this Jupyter Book documentation](https://jupyterbook.org/en/stable/basics/organize.html) about how to edit the table of content.
 
 ## Troubleshooting
 <a name="ts"></a>

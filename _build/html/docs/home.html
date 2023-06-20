@@ -490,7 +490,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="jupyter-book-tutorial">
 <h1>Jupyter Book Tutorial<a class="headerlink" href="#jupyter-book-tutorial" title="Permalink to this headline">#</a></h1>
-<p>(Last updated: June 9, 2023)</p>
+<p>(Last updated: June 20, 2023)</p>
 <p>In this tutorial, we will teach you how to create a Jupyter book and deploy it online.
 This page is written in markdown, which also serves as an example.
 All the content on this website is licensed under a <a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
@@ -768,10 +768,28 @@ More information about how to publish your book can be found on <a class="refere
 <section id="update-the-website-content">
 <h2>Update the website content<a class="headerlink" href="#update-the-website-content" title="Permalink to this headline">#</a></h2>
 <p><a name="update"></a></p>
-<p>Every time you build some new files (or updated files), you need to rebuild the book and push new changes to your GitHub repository.</p>
+<p>After completing all the above steps, you should now have a remote repository on GitHub and a local repository on your computer.
+Your local repository should be a folder with the name that we asked you to rename (i.e., the <code class="docutils literal notranslate"><span class="pre">MY_REPOSITORY_NAME</span></code> in the previous steps).
+If you are still confused about why there are remote and local repositories, check the 15-minute Git tutorial video that is mentioned in the <a class="reference external" href="#pre">Prerequisites</a>.</p>
+<p>If you cannot find the location of the folder on your computer, find it using the search functionality on your computer’s operating system.
+For Windows users, there should be a search bar near the Windows start menu.
+For Mac users, there should be a magnifying glass icon at the top right.</p>
+<p>Now you can start to work on your notebook or markdown files.
+We recommend that you start with the <code class="docutils literal notranslate"><span class="pre">notebook.ipynb</span></code> file and replace the content with your code and text.
+If you already have an existing notebook, you can replace the original <code class="docutils literal notranslate"><span class="pre">notebook.ipynb</span></code> file with your notebook and rename the file with <code class="docutils literal notranslate"><span class="pre">notebook.ipynb</span></code>.</p>
 <p>To update the content of your website, <strong>repeat step 4 and 5 without the package installation parts</strong>.
 Step 4 will rebuild the book, which means compiling/translating the notebook and markdown files into HTML/CSS/JavaScript files.
 Step 5 will push your new content to the GitHub repository and update the online content of your website.</p>
+<p>Every time you build some new files (or updated files), you need to rebuild the book and push new changes to your remote GitHub repository.
+This, again, will take some time for GitHub to process the changes and update the website.
+You can check the Actions page (as shown in the image below) for the status.</p>
+<p><img alt="actions_page" src="../_images/actions_page.png" /></p>
+<p>If the Actions page shows that the status is good with a green checkmark (as shown in the image below), it means that the webpage is successfully updated.
+If you still do not see the changes on your browser, either wait for a while or clear the browser cache.
+Search online (e.g., Google) to know how to clear your browser cache.</p>
+<p><img alt="page_updated" src="../_images/page_updated.png" /></p>
+<p>If you have multiple notebook files that you want to add to the website, you will need to edit the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file.
+Check <a class="reference external" href="https://jupyterbook.org/en/stable/basics/organize.html">this Jupyter Book documentation</a> about how to edit the table of content.</p>
 </section>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
