@@ -1,6 +1,6 @@
 # Jupyter Book Tutorial
 
-(Last updated: June 20, 2023)
+(Last updated: May 26, 2024)
 
 In this tutorial, we will teach you how to create a Jupyter book and deploy it online.
 This page is written in markdown, which also serves as an example.
@@ -34,6 +34,7 @@ We will use [GitHub Pages](https://pages.github.com) to deploy your compiled boo
 
 GitHub has a new policy that you can no longer use your account password to push file changes.
 You must [create a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) and use the token when pushing changes to a GitHub repository.
+To do so, go to [this page](https://github.com/settings/tokens) to create a classic token (not the fine-grained token).
 You also need to give the token proper access permissions/scopes, as indicated in the following image:
 
 ![token_scope](images/token_scope.png)
@@ -236,6 +237,7 @@ You can then use your browser to open the files locally on your machine to view 
 You can also install a [local Apache HTTP Server](https://httpd.apache.org/) to view the files since the html files are sometimes incorrectly displayed if opened using a browser.
 
 We also already set up the configuration file `_config.yml` and the table of content file `_toc.yml` for you.
+You need to edit the `_config.yml` file to make it suitable for your use case.
 For more information about how to edit them, check [this documentation](https://jupyterbook.org/en/stable/start/create.html).
 
 ## Step 5: Deploy the book online
@@ -298,6 +300,7 @@ Your local repository should be a folder with the name that we asked you to rena
 If you are still confused about why there are remote and local repositories, check the 15-minute Git tutorial video that is mentioned in the [Prerequisites](#pre).
 
 If you cannot find the location of the folder on your computer, find it using the search functionality on your computer's operating system.
+Use your repository name as the search keyword.
 For Windows users, there should be a search bar near the Windows start menu.
 For Mac users, there should be a magnifying glass icon at the top right.
 
@@ -308,6 +311,16 @@ If you already have an existing notebook, you can replace the original `notebook
 To update the content of your website, **repeat step 4 and 5 without the package installation parts**.
 Step 4 will rebuild the book, which means compiling/translating the notebook and markdown files into HTML/CSS/JavaScript files.
 Step 5 will push your new content to the GitHub repository and update the online content of your website.
+We provide the example terminal commands below:
+```sh
+jupyter-book build --all .
+git status
+git add .
+git status
+git commit -m "Update my book."
+git push
+ghp-import -n -p -f _build/html
+```
 
 Every time you build some new files (or updated files), you need to rebuild the book and push new changes to your remote GitHub repository.
 This, again, will take some time for GitHub to process the changes and update the website.
