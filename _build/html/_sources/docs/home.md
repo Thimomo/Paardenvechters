@@ -32,6 +32,11 @@ We will use [GitHub Pages](https://pages.github.com) to deploy your compiled boo
 
 ### Create a GitHub personal access token
 
+:::{note}
+You can skip this step if you download the [GitHub Desktop](https://desktop.github.com/) and set it up on your local machine.
+The GitHub Desktop will guide you through the setup process, and in this way, you do not have to create a personal access token.
+:::
+
 GitHub has a new policy that you can no longer use your account password to push file changes.
 You must [create a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) and use the token when pushing changes to a GitHub repository.
 To do so, go to [this page](https://github.com/settings/tokens) to create a classic token (not the fine-grained token).
@@ -62,6 +67,14 @@ Also, here is [a 15-minute Git tutorial video](https://www.youtube.com/watch?v=U
 The first step is installing the conda virtual environment using [miniconda](https://docs.conda.io/en/main/miniconda.html) or [anaconda](https://www.anaconda.com/).
 Pick either one of them and follow the instructions on the website to install conda so that you can use the `conda` command on your terminal.
 
+:::{important}
+If you already have `conda` installed on your machine, you can skip this step. Check your `conda` installation by running the following command:
+```sh
+conda --version
+```
+If `conda` is installed, you should see a printed message with the version number.
+:::
+
 We recommend using miniconda since it is light-weighted, and you can avoid waiting for a long time to install many packages that may not be necessary.
 If you already have the conda environment ready on your machine, you can skip this step.
 
@@ -90,20 +103,11 @@ One for Mac/Linux users, and another one for Windows users.
 Now, create a new conda environment using the command below.
 We need to install Jupyter Book in the conda environment.
 ```sh
-conda create -n jupyterbook
+conda create -n jupyterbook python=3.10
 ```
 After you have the environment ready, activate it.
 ```sh
 conda activate jupyterbook
-```
-Then, install Python in the environment.
-```sh
-conda install python
-```
-Next, install `pip` and check if the path of `pip` is correct.
-```sh
-conda install pip
-which pip # make sure this is the pip inside the jupyterbook environment, which means the path should contains the "jupyterbook" string
 ```
 Finally, install the packages that are needed for building and compiling notebooks.
 ```sh
@@ -149,7 +153,7 @@ Make sure that you close the entire terminal program and re-launch it.
 
 Next, create a new conda environment.
 ```sh
-conda create -n jupyterbook
+conda create -n jupyterbook python=3.10
 ```
 After you have the environment ready, activate it.
 ```sh
@@ -179,10 +183,17 @@ git clone https://github.com/yenchiah/jupyter-book-template
 The cloned tutorial repository has the template files that you need to build your website.
 We are only using the template for reference.
 
-Next, go into the template folder and delete the old `git` history from the template since we do not need them.
+Next, go into the template folder and delete the old `git` history from the template since we do not need them. For Mac and Linux, run the following commands:
 ```sh
 cd jupyter-book-template
 rm -rf .git
+cd ..
+```
+
+For Windows, we recommand using the bash terminal that comes with the git tool. If the above commands do not work, maybe you are running a different terminal system on Windows. Try the following commands instead if the above ones do not work.
+```sh
+cd jupyter-book-template
+del .git
 cd ..
 ```
 
