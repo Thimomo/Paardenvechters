@@ -78,9 +78,9 @@ If `conda` is installed, you should see a printed message with the version numbe
 We recommend using miniconda since it is light-weighted, and you can avoid waiting for a long time to install many packages that may not be necessary.
 If you already have the conda environment ready on your machine, you can skip this step.
 
-For Mac users, you can also install miniconda using the [Homebrew](https://brew.sh/) package manager:
+For Mac users, you can also install miniconda using the [Homebrew](https://brew.sh/) package manager, as documented on [this page](https://formulae.brew.sh/cask/miniconda):
 ```sh
-brew cask install miniconda
+brew install --cask miniconda
 echo 'export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"' >> ~/.bash_profile
 echo '. /usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh' >> ~/.bash_profile
 source ~/.bash_profile
