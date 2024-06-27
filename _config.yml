@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Paardenvechters
-author: Yen-Chia Hsu
+author: Thimo
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -34,6 +34,7 @@ launch_buttons:
   jupyterhub_url: ""
 
 sphinx:
+  theme: sphinx_book_theme
   config:
     nb_render_plugin: 'default'
     nb_render_priority:
