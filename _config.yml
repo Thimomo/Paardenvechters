@@ -34,17 +34,12 @@ launch_buttons:
   jupyterhub_url: ""
 
 sphinx:
-  theme: sphinx_book_theme  # Specify the theme here
-
   config:
     nb_render_plugin: 'default'
     nb_render_priority:
       html: ["application/vnd.jupyter.widget-view+json", "application/vnd.plotly.v1+json", "application/javascript", "text/html", "image/svg+xml", "image/png", "image/jpeg", "text/markdown", "text/latex", "text/plain"]
-
   extra_extensions:
-    # Additional extensions or configurations can be added here
     - "IPython.sphinxext.ipython_console_highlighting"
   config:
     html_js_files:
-      # This is for plotly to work
       - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
