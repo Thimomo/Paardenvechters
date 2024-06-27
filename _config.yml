@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Paardenbechten # Change this to your book title.
-author: Yen-Chia Hsu # Change this to your name (or your team/organization name).
+title: Paardenvechters
+author: Yen-Chia Hsu
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -16,9 +16,9 @@ latex:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/Thimomo/Paardenvechters  # Online location of your book (change this to your GitHub repository link)
-  path_to_book: docs/Obesity Nb. Deel 1.ipynb  # Optional path to your book, relative to the repository root
-  branch: main  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/Thimomo/Paardenvechters  # Ensure this is correct
+  path_to_book: docs  # Point to the docs directory
+  branch: main
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
