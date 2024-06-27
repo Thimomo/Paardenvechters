@@ -4,4 +4,4 @@
 format: jb-book
 root: docs
 chapters:
-- file: Obesity Nb. Deel 1.ipynb
+  - file: docs/Obesity Nb. Deel 1.ipynb
