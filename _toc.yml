@@ -2,5 +2,6 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
+root: docs
 chapters:
-- file: docs/Obesity Nb. Deel 1.ipynb
+- file: Obesity Nb. Deel 1.ipynb
