@@ -17,7 +17,7 @@ latex:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/Thimomo/Paardenvechters  # Ensure this is correct
-  path_to_book: docs  # Point to the docs directory
+  path_to_book: .  # Point to the docs directory
   branch: main
 
 # Add GitHub buttons to your book
